@@ -4,7 +4,7 @@ import React, {useState, useEffect} from 'react';
 
 import * as Location from 'expo-location';
 export default function App() {
-  const [location, setLocation] = useState();
+  const [location, setLocation]: any = useState();
   const [errorMsg, setErrorMsg] = useState();
 
   useEffect(() => {
@@ -20,14 +20,13 @@ export default function App() {
     })();
   }, []);
 
-  let { latitude, longitude } = '';
+  let { latitude, longitude }: any = '';
   
   if (errorMsg) {
     console.log(errorMsg);
   } else if (location) {
     latitude = location.coords.latitude;
     longitude = location.coords.longitude;
-    console.log(latitude);
   }
   return (
     <View style={styles.container}>
