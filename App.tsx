@@ -28,6 +28,11 @@ export default function App() {
     latitude = location.coords.latitude;
     longitude = location.coords.longitude;
   }
+  
+  let key : String = 'bfb1163f61c11fe62b64750c517455d1'
+  const api = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${key}&lang=pt_br&units=metric`;
+  console.log(api);
+  
   return (
     <View style={styles.container}>
       <Text>Localização Atual é: </Text>
